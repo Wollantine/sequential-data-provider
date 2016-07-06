@@ -46,7 +46,9 @@ Prints:
 ```
 ##Test
 
-You can test it using
+You can test it by doing:
 ```
+cd node_modules/sequential-data-provider
+npm install
 npm run test
 ```
