@@ -1,4 +1,4 @@
-#data-provider
+#sequential-data-provider
 
 Simple module that provides sequentially rows of data as objects to a function. The objects get their properties' names from the first row of the data.
 
