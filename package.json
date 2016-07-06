@@ -1,6 +1,6 @@
 {
   "name": "sequential-data-provider",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple module that provides sequentially rows of data as objects to a function. The objects get their properties' names from the first row of the data.",
   "main": "lib/index.js",
   "repository": {
