@@ -1,0 +1,27 @@
+{
+  "name": "sequential-data-provider",
+  "version": "1.0.0",
+  "description": "Simple module that provides sequentially rows of data as objects to a function. The objects get their properties' names from the first row of the data.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kwirke/sequential-data-provider.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "faucet": "^0.0.1",
+    "babel-tape-runner": "^2.0.1",
+    "tape": "^4.6.0",
+    "sinon": "^1.17.4"
+  },
+  "scripts": {
+    "test": "babel-tape-runner test.js | faucet"
+  },
+  "keywords": [
+    "data-provider",
+    "data",
+    "provider"
+  ],
+  "author": "Kwirke",
+  "license": "MIT"
+}
