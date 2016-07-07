@@ -30,7 +30,7 @@ const populate = (data, test) => {
         // Generate the data object with the first row of the data as keys
         // and the i-th row of the data as values
         let datum = data[i].reduce((result, item, index) => {
-            result[data[0][index]] = item;
+            if (index <= data[0].length-1) result[data[0][index]] = item;
             return result;
         }, {});
 

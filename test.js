@@ -9,13 +9,20 @@ const data = [
     ['Legolas', 2931]
 ];
 
+const extra_data = [
+    ['name', 'age'],
+    ['Frodo', 50, 'Baggins'],
+    ['Aragorn', 87],
+    ['Legolas', 2931]
+];
+
 const expected = [
     { name: 'Frodo', age: 50 },
     { name: 'Aragorn', age: 87 },
     { name: 'Legolas', age: 2931 }
 ];
 
-test('sequential-sequential-data-provider', (assert) => {
+test('sequential-data-provider', (assert) => {
     let actual = [];
     populate(data, (result) => {
         actual.push(result);
@@ -56,6 +63,20 @@ test('sequential-sequential-data-provider', (assert) => {
     spy.reset();
     populate([['a', 'b']], spy);
     assert.notOk(spy.called, 'A matrix with just one row produces no calls');
+
+    exception = false;
+    try {
+        populate([['part1', 'part2', 'part3'], ['Wrong ', 'data.']], null);
+    } catch (e) {
+        exception = true;
+    }
+    assert.ok(exception, 'A matrix with an incomplete row throws exception');
+
+    actual = [];
+    populate(extra_data, (result) => {
+        actual.push(result);
+    });
+    assert.deepEqual(actual, expected, 'A matrix with a too long row ignores the extra values');
 
     exception = false;
     try {

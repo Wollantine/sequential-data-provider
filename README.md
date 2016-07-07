@@ -27,9 +27,9 @@ npm install sequential-data-provider --save
 ##Usage
 
 ```javascript
-const populate = require('sequential-data-provider');
+var populate = require('sequential-data-provider');
 
-const data = [
+var data = [
     ['name', 'age'],
     ['Frodo', 50],
     ['Aragorn', 87],
